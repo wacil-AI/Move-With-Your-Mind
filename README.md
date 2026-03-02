@@ -33,6 +33,37 @@ This prototype turns **brain activity into real-time movement**:
 - `right_hand` prediction -> move the player **right**
 - real-time command stream -> **dodge obstacles** and survive longer
 
+### From Calibration to Real-Time LSL Control
+
+We start with a calibration session using a **MetaLab EEG headset (casque EEG)**.  
+The player follows on-screen instructions and performs motor imagery:
+
+- imagine **left-hand movement** when the left cue is shown
+- imagine **right-hand movement** when the right cue is shown
+- EEG is recorded live through LSL and saved to EDF for training
+
+<p align="center">
+  <img src="Images/Brain_EEG_dark.jpg" alt="Brain EEG dark visualization" width="440" />
+  <img src="Images/Brain_EEG_light.jpg" alt="Brain EEG light visualization" width="440" />
+</p>
+
+Training pipeline used after calibration:
+
+1. Signal cleaning and band filtering (mu/beta range)
+2. PSD-based analysis for spectral quality checks
+3. CSP feature extraction
+4. LDA classification (`left_hand` vs `right_hand`)
+
+By default, calibration uses **30 trials per class** in-game (left/right).  
+If you want your hackathon setting of **60 left + 60 right trials**, run with:
+
+```bash
+BCI_CALIB_TRIALS_PER_CLASS=60 python Hacktion_game-main/Main.py
+```
+
+Each trial is then segmented for training with a 3-second EEG window (`t=0.5s -> 3.5s` after cue marker), and the resulting model is saved as a `.pkl` file.  
+After calibration, the online bridge reads LSL in real time, predicts left/right intent continuously, and sends UDP commands to control the game live.
+
 
 
 ### Live Game Screen
