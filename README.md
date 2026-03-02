@@ -35,6 +35,10 @@ This prototype turns **brain activity into real-time movement**:
 
 ### From Calibration to Real-Time LSL Control
 
+<p align="center">
+  <img src="Images/Mentalab.png" alt="MetaLab EEG headset used for calibration" width="520" />
+</p>
+
 We start with a calibration session using a **MetaLab EEG headset (casque EEG)**.  
 The player follows on-screen instructions and performs motor imagery:
 
