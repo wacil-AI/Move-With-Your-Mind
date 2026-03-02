@@ -1,0 +1,6 @@
+numpy
+pylsl
+joblib
+scikit-learn
+pyedflib
+mne
