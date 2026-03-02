@@ -1,5 +1,12 @@
 # HactionComplet Online BCI Control
-
+I implemented a brain-control game project: you move in-game using EEG signals.
+A headset sends your brain data live to the computer through LSL.
+Our script reads this stream and cuts it into short overlapping windows.
+Each window is cleaned and analyzed, then sent to a trained CSP+LDA model.
+The model predicts your intent: left_hand, right_hand, or idle.
+We convert that prediction into a UDP command (-1, 1, or 0) for the game.
+The game receives commands in real time, so you can dodge obstacles with your mind.
+You can train your own model with calibration data, or test the full pipeline with a fake EEG stream.
 This project now has a clear online control pipeline:
 
 1. Read EEG from LSL
