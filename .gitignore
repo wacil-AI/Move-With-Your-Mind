@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated recordings / diagnostics
+calibrage_recording_*.edf
+*.csv
+*.log
+
+# Local temp/runtime artifacts
+.vscode/
