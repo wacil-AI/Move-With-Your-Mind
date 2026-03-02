@@ -46,6 +46,10 @@ The in-game HUD displays BCI health (`WAITING / LIVE / STALE`), packet/command c
 <p align="center">
   <video src="Video_game.mp4" controls preload="metadata" width="900">
     Your viewer does not support embedded video. Open
+
+https://github.com/user-attachments/assets/f59635eb-154a-40ea-b368-434bd733d9a4
+
+
     <a href="Video_game.mp4">Video_game.mp4</a>.
   </video>
 </p>
