@@ -33,6 +33,8 @@ This prototype turns **brain activity into real-time movement**:
 - `right_hand` prediction -> move the player **right**
 - real-time command stream -> **dodge obstacles** and survive longer
 
+
+
 ### Live Game Screen
 
 <p align="center">
@@ -44,15 +46,11 @@ The in-game HUD displays BCI health (`WAITING / LIVE / STALE`), packet/command c
 ### Gameplay Video
 
 <p align="center">
-  <video src="Video_game.mp4" controls preload="metadata" width="900">
-    Your viewer does not support embedded video. Open
-
-https://github.com/user-attachments/assets/f59635eb-154a-40ea-b368-434bd733d9a4
-
-
-    <a href="Video_game.mp4">Video_game.mp4</a>.
+  <video src="https://github.com/user-attachments/assets/1b953de7-c85e-474b-beb7-fa50e5fbf25a" width="900" controls>
+    Your browser does not support the video tag.
   </video>
 </p>
+
 
 If embedded playback is not available on your platform, use this direct link: [Video_game.mp4](Video_game.mp4).
 
